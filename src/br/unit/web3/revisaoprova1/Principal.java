@@ -18,14 +18,14 @@ public class Principal {
 	
 	
 	public Principal() throws SQLException, NamingException {
-		Connection conx = getConexao(); 
-		String sql1 = "CREATE TABLE funcionarios ( matricula VARCHAR(20) NOT NULL PRIMARY KEY, nome VARCHAR(40) NOT NULL, sexo INTEGER, estadoCivil INTEGER, cpf VARCHAR(12) NOT NULL, dataNascimento VARCHAR(10), dataAdmissao VARCHAR(10), salario FLOAT, senha VARCHAR(20)";
-		String sql2 = "CREATE TABLE dependentes ( matricula VARCHAR(20) NOT NULL PRIMARY KEY, sequencia INTEGER, nome VARCHAR(40) NOT NULL, sexo INTEGER, dataNascimento VARCHAR(10), PRIMARY KEY (matricula, sequencia)";
-		Statement stmt1 = conx.createStatement();
-		stmt1.executeUpdate(sql1);
-		stmt1.executeUpdate(sql2);
-		stmt1.close();
-		conx.close();	
+//		Connection conx = getConexao(); 
+//		String sql1 = "CREATE TABLE funcionarios ( matricula VARCHAR(20) NOT NULL PRIMARY KEY, nome VARCHAR(40) NOT NULL, sexo INTEGER, estadoCivil INTEGER, cpf VARCHAR(12) NOT NULL, dataNascimento VARCHAR(10), dataAdmissao VARCHAR(10), salario FLOAT, senha VARCHAR(20))";
+//		String sql2 = "CREATE TABLE dependentes ( matricula VARCHAR(20) NOT NULL, sequencia INTEGER, nome VARCHAR(40) NOT NULL, sexo INTEGER, dataNascimento VARCHAR(10), PRIMARY KEY (matricula, sequencia))";
+//		Statement stmt1 = conx.createStatement();
+//		stmt1.executeUpdate(sql1);
+//		stmt1.executeUpdate(sql2);
+//		stmt1.close();
+//		conx.close();	
 	}
 
 	private Connection getConexao() throws SQLException, NamingException{
@@ -108,7 +108,7 @@ public class Principal {
 	public Dependente pesquisarDependente(Matricula matricula, int sequencia){
 		try{
 			Connection conx = getConexao(); 
-			String sql1 = "SELECT * FROM depentens WHERE matricula=? && sequencia=?";
+			String sql1 = "SELECT * FROM dependentes WHERE matricula=? AND sequencia=?";
 			PreparedStatement stmt1 = conx.prepareStatement(sql1);
 				stmt1.setString(1, matricula.getMatricula());
 				stmt1.setInt(2, sequencia);
@@ -163,7 +163,7 @@ public class Principal {
 		{
 			try{
 				Connection conx = getConexao(); 
-				String sql1 = "UPDATE dependentes SET nome=?, sexo=?, dataNascimento=? WHERE matricula=? && sequencia=?";
+				String sql1 = "UPDATE dependentes SET nome=?, sexo=?, dataNascimento=? WHERE matricula=? AND sequencia=?";
 				PreparedStatement stmt1 = conx.prepareStatement(sql1);
 					stmt1.setString(1, a.getNome());
 					stmt1.setInt(2, a.getSexo().getSexo());
@@ -202,7 +202,7 @@ public class Principal {
 		if (dependente != null)
 			try{
 				Connection conx = getConexao(); 
-				String sql1 = "DELETE dependentes WHERE matricula=? && sequencia=?";
+				String sql1 = "DELETE dependentes WHERE matricula=? AND sequencia=?";
 				PreparedStatement stmt1 = conx.prepareStatement(sql1);
 					stmt1.setString(1, a.getMatricula().getMatricula());
 					stmt1.setInt(2, a.getSequencia());

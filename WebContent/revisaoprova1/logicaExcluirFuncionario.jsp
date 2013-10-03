@@ -1,6 +1,6 @@
-<%@page import="br.unit.web3.revisaopoo.Aluno"%>
-<%@page import="br.unit.web3.revisaopoo.Matricula"%>
-<%@page import="br.unit.web3.revisaopoo.Turma"%>
+<%@page import="br.unit.web3.revisaoprova1.Principal"%>
+<%@page import="br.unit.web3.revisaoprova1.Funcionario"%>
+<%@page import="br.unit.web3.revisaoprova1.Matricula"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,11 +12,11 @@
 <body>
 <%
 	Matricula mat = new Matricula(request.getParameter("matricula"));
-	Aluno aluno = new Aluno(mat, null, null, null, null, null);	
-	Turma turma = new Turma();
+	Funcionario funcionario = new Funcionario(mat, null, null, null,  null, null, null, 0, null);
+	Principal principal = new Principal();
 	
-	turma.excluirAluno(aluno);	
+	principal.excluirFuncionario(funcionario);	
 %>
-<jsp:forward page="listaAlunos.jsp"></jsp:forward>
+<jsp:forward page="listaFuncionarios.jsp"></jsp:forward>
 </body>
 </html>

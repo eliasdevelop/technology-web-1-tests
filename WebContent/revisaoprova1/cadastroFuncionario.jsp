@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/bootstrap/css/bootstrap-responsive-min.css">
 <script src="../css/bootstrap/js/bootstrap.min.js"></script>
-<title>Cadastro Aluno</title>
+<title>Cadastro Funcionario</title>
 </head>
 	<body>		
-		<form class="form-horizontal" action="logicaCadastro.jsp" method="post">
-			<h1 style="text-align: center">Cadastro de Alunos</h1>
+		<form class="form-horizontal" action="logicaCadastroFuncionario.jsp" method="post">
+			<h1 style="text-align: center">Cadastro de Funcionarios</h1>
 			<div style="margin-top: 50px">
 				<div class="control-group">
 					<label class="control-label">Matricula: </label>
@@ -49,37 +49,39 @@
 					</div>
 				</div>
 				<div class="control-group">
+					<label class="control-label">Cpf: </label>
+					<div class="controls">
+						<input type="text" name="cpf"/>
+					</div>							
+				</div>
+				<div class="control-group">
 					<label class="control-label">Data de Nascimento:</label>
 					<div class="controls">
 						<input type="text" name="dataDeNascimento"/>
 					</div>
 				</div>	
 				<div class="control-group">
-					<label class="control-label">Notas: </label>
+					<label class="control-label">Data de Admissao:</label>
+					<div class="controls">
+						<input type="text" name="dataDeAdmissao"/>
+					</div>
+				</div>	
+				<div class="control-group">
+					<label class="control-label">Salario: </label>
+					<div class="controls">
+						<input type="text" name="salario"/>
+					</div>							
 				</div>
-				<div class="control-group" style="margin-left: 5%">	
-					<div class="control-group">
-						<label class="control-label">1ª Nota: </label>
-						<div class="controls">
-							<input type="text" name="nota1" />
-						</div>	
-					</div>
-					<div class="control-group">
-						<label class="control-label">2ª Nota: </label>
-						<div class="controls">
-							<input type="text" name="nota2" />
-						</div>	
-					</div>
-					<div class="control-group">
-						<label class="control-label">3ª Nota: </label>
-						<div class="controls">
-							<input type="text" name="nota3" />
-						</div>	
-					</div>
+				<div class="control-group">
+					<label class="control-label">Senha: </label>
+					<div class="controls">
+						<input type="text" name="senha"/>
+					</div>							
 				</div>
+				
 				<div style="text-align: center;">
 					<button class="btn btn-success" type="submit">Salvar</button>
-					<a href="listaAlunos.jsp"><button class="btn btn-danger" type="button">Cancelar</button></a>
+					<a href="listaFuncionarios.jsp"><button class="btn btn-danger" type="button">Cancelar</button></a>
 				</div>
 			</div>
 		</form>

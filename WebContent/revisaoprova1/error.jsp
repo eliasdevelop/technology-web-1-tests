@@ -10,7 +10,7 @@
 <title>Error !</title>
 </head>
 <body>
-<form action = "listaAlunos.jsp" > 
+<form action = "listaFuncionarios.jsp" > 
 <%@ page isErrorPage = "true" %> 
 <div style="text-align: center">
 <img src="css/bootstrap/img/error.png">
