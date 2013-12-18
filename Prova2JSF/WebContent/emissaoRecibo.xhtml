@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html">
+<p:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</p:head>
+<p:body>
+RECIBO EMITIDO COM SUCESSO
+	<p:form>
+		<p:messages globalOnly="true"></p:messages>
+		<table>
+			<tr>
+				<td>
+					<p:outputLabel value="Identificacao do Navio" for="itIdNavio"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itIdNavio" size="40" value="#{emissaoRecibo.portoReciboEmitido.idNavio}" required="true" label="idNavio"></p:inputText>
+					<p:message for="itIdNavio"></p:message>
+				</td>	
+			</tr>
+						<tr>
+				<td>
+					<p:outputLabel value="Sequencial" for="itSequencial"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itSequencial" size="40" value="#{emissaoRecibo.portoReciboEmitido.sequencial}" required="true" label="sequencial"></p:inputText>
+					<p:message for="itSequencial"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Nome do Comandante" for="itComandante"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itComandante" size="40" value="#{emissaoRecibo.portoReciboEmitido.comandante}" required="true" label="comandante"></p:inputText>
+					<p:message for="itComandante"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Nacionalidade" for="itNacionalidade"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itNacionalidade" size="40" value="#{emissaoRecibo.portoReciboEmitido.nacionalidade}" required="true" label="nacionalidade"></p:inputText>
+					<p:message for="itNacionalidade"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Preco" for="itPreco"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itPreco" size="40" value="#{emissaoRecibo.portoReciboEmitido.preco}" required="true" label="preco"></p:inputText>
+					<p:message for="itPreco"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Data Entrada" for="itDataEntrada"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itDataEntrada" size="40" value="#{emissaoRecibo.portoReciboEmitido.dataEntrada}" required="true" label="dataEntrada"></p:inputText>
+					<p:message for="itDataEntrada"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Data Saida" for="itDataSaida"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itDataSaida" size="40" value="#{emissaoRecibo.portoReciboEmitido.dataSaida}" required="true" label="dataSaida"></p:inputText>
+					<p:message for="itDataSaida"></p:message>
+				</td>	
+			</tr>
+		</table>
+		<p:commandLink value="INDEX" action="index" >
+		</p:commandLink>
+		
+	</p:form>
+</p:body>
+</html>

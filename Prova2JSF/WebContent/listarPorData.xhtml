@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html">
+<p:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</p:head>
+<p:body>
+	<p:form>
+		<p:messages globalOnly="true"></p:messages>
+		<table>
+			<tr>
+				<td>
+					<p:outputLabel value="Data Inicio" for="itDataInicio"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itDataInicio" size="20" value="" required="true" label="dataInicio"></p:inputText>
+					<p:message for="itDataInicio"></p:message>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Data Fim" for="itDataFim"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itDataFim" size="20" value="" required="true" label="dataFim"></p:inputText>
+					<p:message for="itDataFim"></p:message>
+				</td>	
+			</tr>
+		</table>
+		<p:commandButton id="cdListarPorData" value="Listar" actionListener="#{listarPorData.cbListarPorDataActionListener}" action="listaData">
+		</p:commandButton>
+		<p:commandLink value="Voltar" action="index" >
+		</p:commandLink>
+		
+	</p:form>
+</p:body>
+</html>

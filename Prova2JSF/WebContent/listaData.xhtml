@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html">
+<p:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</p:head>
+<p:body>
+	
+<p:form >
+	<p:dataTable border="1" value="#{listaPorData.listaDatas}" var="porto">
+		<p:column id="column1">
+		<p:outputText value="#{porto.idNavio}"></p:outputText>
+			<c:facet name="header">
+				<p:outputText value="Identif Navio"></p:outputText>
+			</c:facet>
+		</p:column>
+		<p:column id="column2">
+		<p:outputText value="#{porto.dataEntrada}"></p:outputText>
+			<c:facet name="header">
+				<p:outputText value="Data Entrada"></p:outputText>
+			</c:facet>
+		</p:column>
+		<p:column id="column3">
+		<p:outputText value="#{porto.dataSaida}"></p:outputText>
+			<c:facet name="header">
+				<p:outputText value="Data Saida"></p:outputText>
+			</c:facet>
+		</p:column>
+		<p:column id="column4">
+		<p:outputText value="#{porto.nacionalidade}"></p:outputText>
+			<c:facet name="header">
+				<p:outputText value="Nacionalidade"></p:outputText>
+			</c:facet>
+		</p:column>
+		<p:column id="column5">
+			<p:commandLink value="Emissão de Recibo" actionListener="#{emissaoRecibo.cdEmitirReciboActionListener}" action="emissaoRecibo" >
+			</p:commandLink>
+		</p:column>
+	</p:dataTable>
+</p:form>
+	<p:commandLink value="Index" action="index" >
+	</p:commandLink>
+</p:body>
+</html>

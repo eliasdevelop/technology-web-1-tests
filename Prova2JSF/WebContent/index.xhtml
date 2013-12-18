@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html">
+<p:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</p:head>
+<p:body>
+	<p:form>
+		<table>
+			<tr>
+				<td>
+					<p:outputLabel value="Identificacao do Navio" for="itIdNavio"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itIdNavio" size="40" value="" label="idNavio"></p:inputText>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Nome do Comandante" for="itComandante"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itComandante" size="40" value="" label="comandante"></p:inputText>
+				
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Nacionalidade" for="itNacionalidade"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itNacionalidade" size="40" value=""  label="nacionalidade"></p:inputText>
+				
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<p:outputLabel value="Preco" for="itPreco"></p:outputLabel>
+				</td>
+				<td>
+					<p:inputText id="itPreco" size="40" value="" label="preco"></p:inputText>
+					
+				</td>	
+			</tr>
+		</table>
+		<p:commandButton id="cbRegistraMovimento" value="Registrar Movimento" actionListener="#{index.cbRegistraMovimentoActionListener}" action="index">
+		</p:commandButton>
+		<p:commandLink value="Listar por data" action="listarPorData" >
+		</p:commandLink>
+	</p:form>
+	
+</p:body>
+</html>
